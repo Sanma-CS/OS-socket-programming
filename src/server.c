@@ -1,4 +1,4 @@
-#include "/home/saury/OS-socket-programming/lib/libserver.h"
+#include "libserver.h"
 
 #define PORT 8888
 #define BUFSIZE 1024

@@ -1,10 +1,25 @@
 CC = gcc
 
+IDIR = include
+SDIR = src
+BDIR = bin
+
+CFLAGS = -I $(IDIR)
+
+# make 
+
 all: server client
 
-server: lib/libserver.h lib/libserver.c src/server.c
-	$(CC) lib/libserver.h lib/libserver.c src/server.c -o bin/server.o
+clean:
+	rm $(BDIR) -r -f
 	
-client: lib/libclient.h lib/libclient.c src/client.c
-	$(CC) lib/libclient.h lib/libclient.c src/client.c -o bin/client.o
-	
+
+server: $(IDIR)/libserver.c $(SDIR)/server.c
+	@mkdir -p $(BDIR)
+	@echo Compile server
+	$(CC) $(CFLAGS) $^ -o $(BDIR)/$@
+
+client: $(IDIR)/libclient.c $(SDIR)/client.c 
+	@mkdir -p $(BDIR)
+	@echo Compile client
+	$(CC) $(CFLAGS) $^ -o $(BDIR)/$@

@@ -1,4 +1,4 @@
-#include "/home/saury/OS-socket-programming/lib/libclient.h"
+#include "libclient.h"
 
 #define BUFSIZE 1024
 
