@@ -1,8 +1,5 @@
 #include "libserver.h"
 
-#define PORT 8888
-#define BUFSIZE 1024
-
 
 int main(int argc, char *argv[]) {
 	int sockfd = 0;

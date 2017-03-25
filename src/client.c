@@ -1,8 +1,5 @@
 #include "libclient.h"
 
-#define BUFSIZE 1024
-
-
 
 
 int main()
